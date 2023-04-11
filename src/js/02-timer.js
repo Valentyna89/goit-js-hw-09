@@ -47,6 +47,7 @@ function onClick() {
   const intervalId = setInterval(updateTimer, 1000);
 
   function updateTimer() {
+    startBtn.disabled = true;
     const timeRemaining = selectedDate.getTime() - new Date().getTime();
 
     if (timeRemaining <= 0) {
